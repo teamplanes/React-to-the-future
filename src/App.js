@@ -2,25 +2,15 @@ import {
   ChakraProvider,
   theme,
 } from '@chakra-ui/react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import {Nav} from './components/bottom-nav'
 import {Home} from './screens/home'
 
-import {ExampleFetch} from './screens/example'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-        <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />}>
-              <Route path="/api" element={<ExampleFetch />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+        <Home />
+        <Nav />
     </ChakraProvider>
   );
 }

@@ -8,7 +8,7 @@ Utilising these APIs you will produce a product that enables communities to conn
 
 ## Getting Started
 
-Before you start digging into the APIs we recommend downloading [Insomnia](https://insomnia.rest/download) (or an alternative such as [Postman](https://www.postman.com/) or [Hoppscotch](https://hoppscotch.io/)), this will allow you to easily send and receive data from the API’s and make it easy to inspect the data.
+Before you start digging into the APIs we recommend downloading [Postman](https://www.postman.com/), this will allow you to easily send and receive data from the API’s and make it easy to inspect the data. Check in the Notion Brief for the Postman Collection download.
 
 You can find more infomation about the API's and all the documentation [here.](https://www.notion.so/planesstudio/6fda8698d27648229741d3be013c7fe5?v=89f5d252a9e8417f930a162ad2a781f8)
 

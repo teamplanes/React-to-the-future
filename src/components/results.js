@@ -4,6 +4,7 @@ export const Results = ({ data }) => {
 
     return  (
         <>
+            <p>{data.placeName}, {data.state}, {data.countryCode}</p>
             <p>Category: {data.aqiInfo.category}</p>
             <p>AQI: {data.AQI}</p>
             <p>CO: {data.CO}</p>

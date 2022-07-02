@@ -1,3 +1,4 @@
+import React,{useState, useEffect} from 'react'
 import {
   ChakraProvider,
   theme,
@@ -7,6 +8,7 @@ import {Home} from './screens/home'
 
 
 function App() {
+
   return (
     <ChakraProvider theme={theme}>
         <Home />

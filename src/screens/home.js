@@ -1,24 +1,24 @@
 import React from 'react';
 import {
   Box,
-  Text,
   Center,
 } from '@chakra-ui/react';
 import {Nav} from '../components/bottom-nav'
-import { Logo } from '../components/logo';
+import { Search } from '../components/search';
+import History from '../components/History'
 
 export const Home = () => {
     return (
+        <>
         <Box minH="100vh">
             <Box textAlign="center" fontSize="xl">
                 <Box spacing={8}>
-                    <Center p={20}><Logo h="40vmin" pointerEvents="none" /></Center>
-                    <Text pt={10} bg="white">
-                        HACK to the future!
-                    </Text>
+                    <Center p={60}><Search /></Center>
+                    <History />
                 </Box>
              </Box>
             <Nav />
         </Box>
+        </>
     );
 }

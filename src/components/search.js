@@ -4,7 +4,7 @@ import { Input } from '@chakra-ui/react'
 export const Search = () => {
     return (
         <>
-            <Input placeholder='Basic usage' />
+            <Input placeholder='Enter a City...' />
         </>
     )
 }

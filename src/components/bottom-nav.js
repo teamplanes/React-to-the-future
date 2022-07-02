@@ -14,8 +14,9 @@ export const Nav = () => {
                 <Box flexDirection="row" display="flex"  justifyContent="space-around" flex={1}>
                     <Link display="flex" flex={1} to="/">Home</Link>
                     <Link display="flex" flex={1} to="/api">API-demo</Link>
+                    <Link display="flex" flex={1} to="/aboutme">About me</Link>
                 </Box>
             </Box>
         </>
-    )   
+    )
 }

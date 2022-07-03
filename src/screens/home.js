@@ -3,7 +3,6 @@ import {
     Box,
     Center,
 } from '@chakra-ui/react';
-import {Nav} from '../components/bottom-nav'
 import { AirQualityResults } from '../components/airquality-results';
 import { Input, InputGroup, Spinner, IconButton,  } from '@chakra-ui/react'
 import { SearchIcon, ViewIcon } from '@chakra-ui/icons'

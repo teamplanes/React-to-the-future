@@ -4,8 +4,10 @@ import {
     Center,
 } from '@chakra-ui/react';
 import {Nav} from '../components/bottom-nav'
-import { Results } from '../components/results';
-import { Input, InputGroup, Spinner, Button } from '@chakra-ui/react'
+import { AirQualityResults } from '../components/airquality-results';
+import { Input, InputGroup, Spinner, IconButton,  } from '@chakra-ui/react'
+import { SearchIcon, ViewIcon } from '@chakra-ui/icons'
+
 import axios from 'axios';
 
 export const Home = () => {
@@ -46,6 +48,28 @@ export const Home = () => {
             setLoading(false);
         }
     }
+
+    const fetchEmissions = () => {
+        const apiKeyClim = process.env.REACT_APP_CLIMATIQ;
+        return fetch('https://beta3.api.climatiq.io/estimate', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${apiKeyClim}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "emission_factor": "passenger_vehicle-vehicle_type_black_cab-fuel_source_na-distance_na-engine_size_na",
+                "parameters": {
+                    "passengers": 4,
+                    "distance": 100,
+                    "distance_unit": "mi"
+                }
+            })
+        })
+            .then(res => res.json())
+    }
+
+
     return (
         <>
             <Box minH="100vh">
@@ -61,13 +85,16 @@ export const Home = () => {
                                         value={inputData}
                                     />
                                     {loading ? <Spinner size='lg' colorScheme='teal' variant='solid'></Spinner> :
-                                        <Button type='submit'>search</Button>}
+                                        <IconButton aria-label='Search database' colorScheme='teal' type='submit' icon={<SearchIcon />} />
+                                        // <Button >search</Button>
+                                    }
                                 </InputGroup>
                             </form>
+                            {data ? <IconButton onClick={fetchEmissions} aria-label='Search database' icon={<ViewIcon />} /> : ''}
                         </Center>
                     </Box>
                 </Box>
-                {data ? <Results data={data} /> : ""}
+                {data ? <AirQualityResults data={data} /> : ""}
                 <Nav />
             </Box>
         </>

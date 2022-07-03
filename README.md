@@ -1,47 +1,56 @@
 # React To The Future Hackathon 🛫
 
 ## The Brief
-
-test
-
 The project brief, alongside API documentation can be found on Notion, [click here](https://www.notion.so/planesstudio/Planes-Hackathon-Brief-a786934e04f0469ebbf4816149942c9a).
 
-## Getting Started
+## Description 
+<Name> is a front end React application for users to check air quality in an area. 
 
-In this repository you will find a template of a single page application in React. Feel free to create your own or use this to get started in your teams.
+# Installation and Usage
+Clone or download this repo.    
+Navigate to root directory of this repository and open the terminal:   
 
-#### Step 1. Clone this repository:
+To start up the client:   
+`cd React-to-the-future`   
+`npm install`     
+`npm run start`   
 
-```sh
-git clone https://github.com/teamplanes/React-to-the-future.git
-```
+It should load on: http://localhost:3000/
 
-**Now, change directory to the project**
+# Technologies
+- HTML, CSS, JavaScript
 
-```sh
-cd React-to-the-future
-```
+### Dependencies: 
+   
+   - react, react-router-dom, chakra-ui/react, axios
 
-#### Step 2. Install dependencies:
+### DevDependencies:
+   - 
 
-```sh
-yarn install
-```
+# Process 
+1. Plan! Come up with an idea on paper, create a wireframe and user stories
+2. Create react front-end using Plane's [template](https://github.com/teamplanes/React-to-the-future) 
+4. Install dependencies and prepare codebase
+5. Start with search functionality and API fetch
 
-**OR, using npm.**
+## Changelog
 
-```sh
-npm install
-```
+### react
+1. Remove boiletplate code
+2. Create search page, about page, main components and history feature
 
-#### Step 3. Run the project locally:
+## Bugs
+- [x] props data showing as undefined - cannot share data between components 
+ 
+# Wins & Challenges
 
-```sh
-yarn start
-```
+### Wins
+- Making new friends and working together!
 
-**OR, using npm**
+### Challenges  
+- Time!
+- New or unfamiliar with react
 
-```sh
-npm run start
-```
+# Future Features
+- User accounts
+- Linked to property search API

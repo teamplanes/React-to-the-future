@@ -9,6 +9,7 @@ import { Input, InputGroup, Spinner, IconButton,  } from '@chakra-ui/react'
 import { SearchIcon, ViewIcon } from '@chakra-ui/icons'
 
 import axios from 'axios';
+import Search from '../components/search';
 
 export const Home = () => {
     const [inputData, setInputData] = useState('');
@@ -72,7 +73,8 @@ export const Home = () => {
 
     return (
         <>
-            <Box minH="100vh">
+        <Search />
+            {/* <Box minH="100vh">
                 <Box textAlign="center" fontSize="xl">
                     <Box spacing={8}>
                         <Center p={60}>
@@ -96,7 +98,7 @@ export const Home = () => {
                 </Box>
                 {data ? <AirQualityResults data={data} /> : ""}
                 <Nav />
-            </Box>
+            </Box> */}
         </>
     );
 }

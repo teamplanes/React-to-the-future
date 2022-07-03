@@ -3,7 +3,6 @@ import {
     Box,
     Center,
 } from '@chakra-ui/react';
-import {Nav} from '../components/bottom-nav'
 import { Input, InputGroup, Spinner, IconButton } from '@chakra-ui/react'
 import axios from 'axios';
 import { Results } from './results';
@@ -78,7 +77,12 @@ function Search(){
     // fetchCoordinates("se165ud", setCoordinates)
     return (
         <>
-            <Box minH="100vh">
+            <Box
+                // bgImage="url('/assets/runners.jpeg')"
+                bgPosition="center"
+                w="100%"
+                bgRepeat="no-repeat"
+                >
                 <Box textAlign="center" fontSize="xl">
                     <Box spacing={8}>
                         <Center p={60}>
@@ -100,7 +104,6 @@ function Search(){
                     </Box>
                 </Box>
                 {data ? <Results data={data} /> : ""}
-                <Nav />
             </Box>
         </>
     );

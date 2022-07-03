@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Results = ({ data }) => {
+export const ClimatiqResults = ({ data }) => {
 
     const AQImeasures = {
         "0-50":"Good",

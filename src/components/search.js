@@ -4,9 +4,10 @@ import {
     Center,
 } from '@chakra-ui/react';
 import {Nav} from '../components/bottom-nav'
-import { Input, InputGroup, Spinner, Button } from '@chakra-ui/react'
+import { Input, InputGroup, Spinner, IconButton } from '@chakra-ui/react'
 import axios from 'axios';
-import {Results} from './results'
+import { Results } from './results';
+import { SearchIcon } from '@chakra-ui/icons'
 
 function Search(){
     const [inputData,setInputData ] = useState("")
@@ -76,9 +77,7 @@ function Search(){
                 <Box textAlign="center" fontSize="xl">
                     <Box spacing={8}>
                         <Center p={60}>
-                            <form 
-                            onSubmit={handleSubmit}
-                            >
+                            <form onSubmit={handleSubmit}>
                                 <InputGroup size='md'>
                                     <Input
                                         pr='4.5rem'
@@ -87,7 +86,9 @@ function Search(){
                                         value={inputData}
                                     />
                                     {loading ? <Spinner size='lg' colorScheme='teal' variant='solid'></Spinner> :
-                                        <Button type='submit'>search</Button>}
+                                        <IconButton aria-label='Search database' colorScheme='teal' type='submit' icon={<SearchIcon />} />
+                                        // <Button >search</Button>
+                                    }
                                 </InputGroup>
                             </form>
                         </Center>

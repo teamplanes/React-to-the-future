@@ -25,11 +25,16 @@ function Search(){
 
         async function fetchCoordinates(){
             //need to delay loading possibility of sending request if waiting for response
-            const res = await fetch(url+inputData.replace(" ",""))
-            const data = await res.json()
-            const {longitude, latitude} = data.data[0]
-            const coordinates = {lat:latitude,lng:longitude}
-            setCoordinates(coordinates)
+            if(inputData.length>2){
+                const res = await fetch(url+inputData.replace(" ",""))
+                const data = await res.json()
+                if(data.data.length){
+                    const {longitude, latitude} = data.data[0]
+                    const coordinates = {lat:latitude,lng:longitude}
+                    setCoordinates(coordinates)
+                }
+            }
+
         }
         if(inputData){
             fetchCoordinates()

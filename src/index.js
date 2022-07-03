@@ -7,9 +7,9 @@ import {
   Route,
 } from "react-router-dom";
 import App from './App';
-import {ExampleFetch} from './screens/example'
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import {AboutUs} from './screens/AboutUs';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
@@ -20,7 +20,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/api" element={<ExampleFetch />} />
+        <Route path="/home" element={<App />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
       </BrowserRouter>
   </StrictMode>
